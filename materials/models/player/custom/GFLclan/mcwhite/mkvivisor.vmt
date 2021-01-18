@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+       	"$baseTexture" "models/player/custom/GFLclan/mcwhite/MKVI"
+	"$bumpmap" "models/player/custom/GFLclan/mcwhite/MKVI_bump"
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" 1
+	"$envmapsaturation" "[.7 .7 .7]"
+	"$envmaptint" "[0.7 .5 .1]"
+	"$phong" "1"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[1 1 1]"
+	"$phongexponent" "2"
+	"$halflambert" 1
+
+}
+

@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/player/mapeadores/morell/ghoulfix/body"
+	"$bumpmap" "models/player/mapeadores/morell/ghoulfix/body_bump"
+
+ 	"$nocull" 1
+	"$blendtintbybasealpha" 1
+ 	"$phong" "1"
+	"$phongexponent" "10"
+	"$phongboost"	"20"
+	"$phongfresnelranges"	"[.15 .5 1]"
+
+}

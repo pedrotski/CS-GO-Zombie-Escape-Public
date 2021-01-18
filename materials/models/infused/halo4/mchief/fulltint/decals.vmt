@@ -1,0 +1,38 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/infused/halo4/mchief/decals"
+	
+	"$translucent" 1
+    "$ambientocclusion" 0
+    "alphatest" "1"
+
+	"$model" 1
+
+	"$halflambert" 1
+
+
+
+	"$normalmapalphaenvmapmask" 1	
+	$detail "models/infused/halo4/mchief/decalsecond"
+	$detailscale 1
+	$detailblendfactor 1
+	$detailblendmode 5
+
+Proxies
+	{
+		PlayerColor
+		{
+			resultVar	$color2
+			default		0.87 0.85 0.83
+		}
+		Clamp
+		{
+			min 0.01
+			max 1.50
+			srcVar1 "$color2"
+			resultVar "$color2"
+		}
+	}
+	
+}
+

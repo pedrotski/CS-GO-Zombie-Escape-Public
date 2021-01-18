@@ -1,0 +1,8 @@
+"Phrases"
+{
+	"Last human is under beacon"
+	{
+		"#format"		"{1:.0f}"
+		"en"			"Last human is under beacon for {1} seconds."
+	}
+}

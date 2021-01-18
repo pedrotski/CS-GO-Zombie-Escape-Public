@@ -1,0 +1,16 @@
+vertexlitgeneric
+{
+	$baseTexture "models/infused/halo4/mchief/Techsuit_D"
+	$bumpmap "models/infused/halo4/mchief/Techsuit_N"
+	$phong 1
+	$phongboost ".25"
+	$phongexponent 2
+	$phongtint "[.5 .75 1]"
+	$halflambert 0
+	$phongfresnelranges "[.1 2 5]"
+	$ambientocclusion 1
+
+	$diffuseexp "1.5"
+	"$blendtintbybasealpha" "1" 
+	"$blendtintcoloroverbase" "0"
+}

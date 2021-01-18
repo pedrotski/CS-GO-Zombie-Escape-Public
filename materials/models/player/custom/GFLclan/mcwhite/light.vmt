@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+       	"$baseTexture" "models\player\mapeadores\morell\masterchief\common\light"
+	"$additive" 1
+	"$selfillum" 1
+}

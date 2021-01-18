@@ -1,0 +1,29 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/infused/halo4/mchief/storm_unsc_decals_eagle_crest_diff"
+	$alphatest 1
+	$Phong 1
+	$Phongexponettexture "models/infused/halo4/mchief/Phongexponent"
+	$Phongboost 0.2
+	$Phongalbedotint 0.2
+	$Phongfresnelranges "[0.5 0.5 0.5]"
+	$ambientocclusion 1
+
+Proxies
+	{
+		PlayerColor
+		{
+			resultVar	$color2
+			default		0.87 0.85 0.83
+		}
+		Clamp
+		{
+			min 0.01
+			max 1.50
+			srcVar1 "$color2"
+			resultVar "$color2"
+		}
+	}
+	
+}
+

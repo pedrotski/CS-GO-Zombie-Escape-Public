@@ -1,0 +1,51 @@
+"Console_C"
+{
+	">>>WAIT C4 EXPLOSION<<<"
+	{
+		"default"		"{red}Console: {green}>>>WAIT C4 EXPLOSION<<<"
+	}
+	">>>20 SECONDS LEFT<<<"
+	{
+		"default"		"{red}Console: {green}>>>20 SECONDS LEFT<<<"
+		"hud"		">>>20 SECONDS LEFT<<<"
+	}
+	">>>5 SECONDS LEFT<<<"
+	{
+		"default"		"{red}Console: {green}>>>5 SECONDS LEFT<<<"
+		"hud"		">>>5 SECONDS LEFT<<<"
+	}
+	">>>RUN<<<"
+	{
+		"default"		"{red}Console: {green}>>>RUN<<<"
+	}
+	">>>MAP BY LeGrem<<<"
+	{
+		"default"		"{red}Console: {green}>>>MAP BY LeGrem<<<"
+	}
+	">>>RUN TO THE CT FLIGHING BOAT<<<<"
+	{
+		"default"		"{red}Console: {green}>>>RUN TO THE CT FLIGHING BOAT<<<<"
+	}
+	">>>FOLLOW THE BLUE LIGHT<<<<"
+	{
+		"default"		"{red}Console: {green}>>>FOLLOW THE BLUE LIGHT<<<<"
+	}
+	">>>CT FLIGHING BOAT LEAVING IN 15 SECONDS<<<"
+	{
+		"default"		"{red}Console: {green}>>>CT FLIGHING BOAT LEAVING IN 15 SECONDS<<<"
+		"hud"		">>>CT FLIGHING BOAT LEAVING IN 15 SECONDS<<<"
+	}
+	">>>ZOMBIES FLIGHING BOAT LEAVING IN 10 SECONDS<<<"
+	{
+		"default"		"{red}Console: {green}>>>ZOMBIES FLIGHING BOAT LEAVING IN 10 SECONDS<<<"
+		"hud"		">>>ZOMBIES FLIGHING BOAT LEAVING IN 10 SECONDS<<<"
+	}
+	">>>CT FLIGHING BOAT LEAVING<<<"
+	{
+		"default"		"{red}Console: {green}>>>CT FLIGHING BOAT LEAVING<<<"
+	}
+	">>>ZOMBIES FLIGHING BOAT LEAVING<<<"
+	{
+		"default"		"{red}Console: {green}>>>ZOMBIES FLIGHING BOAT LEAVING<<<"
+	}
+}

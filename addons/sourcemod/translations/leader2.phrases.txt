@@ -1,0 +1,254 @@
+"Phrases"
+{
+	"Leader Menu Title"
+	{
+		"en"			"Leader Menu"
+	}
+
+	"Leader Menu Vote Player"
+	{
+		"en"			"Leader Menu Vote Player"
+	}
+
+	"Resign from Leader"
+	{
+		"en"			"Resign from Leader"
+	}
+
+	"Sprite Menu"
+	{
+		"en"			"Sprite Menu:"
+	}
+
+	"Defend"
+	{
+		"en"			"Defend"
+	}
+
+	"Follow"
+	{
+		"en"			"Follow"
+	}
+
+	"None"
+	{
+		"en"			"None"
+	}
+
+	"Yes"
+	{
+		"en"			"Yes"
+	}
+
+	"No"
+	{
+		"en"			"No"
+	}
+
+	"Marker Menu"
+	{
+		"en"			"Marker Menu:"
+	}
+
+	"Toggle Beacon"
+	{
+		"en"			"Toggle Beacon:"
+	}
+
+	"Leader Menu Title Sprite"
+	{
+		"en"			"Leader Menu Title Sprite"
+	}
+
+	"No Sprite"
+	{
+		"en"			"Disable:"
+	}
+
+	"Defend Here"
+	{
+		"en"			"Defend Here"
+	}
+
+	"Follow Me"
+	{
+		"en"			"Follow Me"
+	}
+
+	"Leader Menu Title Marker"
+	{
+		"en"			"Leader Menu Title Marker"
+	}
+
+	"Activated"
+	{
+		"en"			"Activated"
+	}
+
+	"Disabled"
+	{
+		"en"			"Disabled"
+	}
+
+	"Remove Marker"
+	{
+		"en"			"Remove All Marks"
+	}
+
+	"Defend Marker"
+	{
+		"en"			"Defend Marker:"
+	}
+
+	"Defend Marker1"
+	{
+		"en"			"Defend Marker-1:"
+	}
+
+	"Defend Marker2"
+	{
+		"en"			"Defend Marker-2:"
+	}
+
+	"Players Menu"
+	{
+		"#format"		"{1:i},{2:i}"
+		"en"			"Votes {1}/{2}"
+	}
+
+	"Leader has been removed"
+	{
+		"en"			" {red}[{green}SM{red}]{default} The current leader has been removed!"
+	}
+
+	"The current leader"
+	{
+		"#format"		"{1:N}"
+		"en"			" {red}[{green}SM{red}]{default} The current leader is {purple}{1}{default}!"
+	}
+
+	"No current leader"
+	{
+		"en"			" {red}[{green}SM{red}]{default} There is no current leader!"
+	}
+
+	"Leader has been removed!"
+	{
+		"en"			" {red}[{green}SM{red}]{default} The current leader has been removed!"
+	}
+
+	"The new leader"
+	{
+		"#format"		"{1:N}"
+		"en"			" {red}[{green}SM{red}] {purple}{1}{default} is the new leader!"
+	}
+
+	"You are now the leader"
+	{
+		"en"			" {red}[{green}SM{red}]{default} You are now the leader! Type !leader to open up the leader menu."
+	}
+
+	"The target has to be alive"
+	{
+		"en"			" {red}[{green}SM{red}]{default} The target has to be alive!"
+	}
+
+	"Usage sm_leader"
+	{
+		"en"			" {red}[{green}SM{red}]{default} Usage: sm_leader <optional: client|#userid>"
+	}
+
+	"Resigned from being leader"
+	{
+		"#format"		"{1:N}"
+		"en"			" {red}[{green}SM{red}] {purple}{1}{default} has resigned from being leader!"
+	}
+
+	"Sprite removed"
+	{
+		"en"			" {red}[{green}SM{red}]{default} Sprite removed."
+	}
+
+	"Sprite changed to Defend Here"
+	{
+		"en"			" {red}[{green}SM{red}]{default} Sprite changed to '{purple}Defend Here{default}'."
+	}
+
+	"Sprite changed to Follow Me"
+	{
+		"en"			" {red}[{green}SM{red}]{default} Sprite changed to '{purple}Follow Me{default}'."
+	}
+
+	"Marker removed"
+	{
+		"en"			" {red}[{green}SM{red}]{default} All marks removed."
+	}
+
+	"Defend Here marker placed1"
+	{
+		"en"			" {red}[{green}SM{red}]{default} 'Defend Here' marker placed - {purple}1{default}."
+	}
+
+	"Defend Here marker placed2"
+	{
+		"en"			" {red}[{green}SM{red}]{default} 'Defend Here' marker placed - {purple}2{default}."
+	}
+
+	"The leader has disconnected"
+	{
+		"en"			" {red}[{green}SM{red}]{default} The leader has disconnected!"
+	}
+
+	"The leader has died"
+	{
+		"en"			" {red}[{green}SM{red}]{default} The leader has died!"
+	}
+
+	"The leader has been infected"
+	{
+		"en"			" {red}[{green}SM{red}]{default} The leader has been infected!"
+	}
+
+	"Leader Chat"
+	{
+		"#format"		"{1:N},{2:s}"
+		"en"			" {red}[{green}Leader{red}]{default} {purple}{1}{default}: {purple}{2}{default}"
+	}
+
+	"Voting for leader is disabled"
+	{
+		"en"			" {red}[{green}SM{red}]{default} Voting for leader is disabled."
+	}
+
+	"There is already a leader"
+	{
+		"en"			" {red}[{green}SM{red}]{default} There is already a leader!"
+	}
+
+	"You ve already voted for this person"
+	{
+		"en"			" {red}[{green}SM{red}]{default} You've already voted for this person!"
+	}
+
+	"You have to vote for a human"
+	{
+		"en"			" {red}[{green}SM{red}]{default} You have to vote for a human!"
+	}
+
+	"You are not a human"
+	{
+		"en"			" {red}[{green}SM{red}]{default} You are not a human, only humans vote!"
+	}
+
+	"Has voted for"
+	{
+		"#format"		"{1:N},{2:N},{3:i},{4:i}"
+		"en"			" {red}[{green}SM{red}] {purple}{1}{default} has voted for {purple}{2}{default} to be the leader ({purple}{3}{default}/{purple}{4}{default} votes)"
+	}
+
+	"Has been voted to be the new leader"
+	{
+		"#format"		"{1:N}"
+		"en"			" {red}[{green}SM{red}] {purple}{1}{default} has been voted to be the new leader!"
+	}
+}

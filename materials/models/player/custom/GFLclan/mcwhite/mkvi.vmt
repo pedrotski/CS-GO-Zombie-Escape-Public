@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+       	"$baseTexture" "models/player/custom/GFLclan/mcwhite/MKVI"
+
+	"$bumpmap" "models/player/custom/GFLclan/mcwhite/MKVI_bump"
+
+	"$phong" "1"
+	"$phongboost"	"7"
+	"$phongfresnelranges"	"[0.05 0.5 1]"
+	"$detail" "models/player/custom/GFLclan/mcwhite/detail"
+	"$detailscale" 10
+	"$phongexponenttexture" "models/player/custom/GFLclan/mcwhite/MKVI_exp"
+	"$phongexponent" 10
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ 0.0 0.0 0.0 ]"
+	"$normalmapalphaenvmapmask" 1
+	"$halflambert" 1
+
+}

@@ -1,0 +1,90 @@
+"Phrases"
+{
+	"Thirdperson is disabled"
+	{
+		"en"			" {green}[SM]{default} Thirdperson and Mirror is disabled."
+	}
+
+	"The target has to be alive"
+	{
+		"en"			" {green}[SM]{default} The target has to be alive."
+	}
+
+	"Currently admins can toggle"
+	{
+		"en"			" {green}[SM]{default} Currently admins can't toggle thirdperson and mirror on players."
+	}
+
+	"You are in thirdsperson"
+	{
+		"en"			" {green}[SM]{default} You are in {green}thirdsperson{default}."
+	}
+
+	"You are in firstsperson"
+	{
+		"en"			" {green}[SM]{default} You are in {green}firstsperson{default}."
+	}
+
+	"Is Player no Alive"
+	{
+		"en"			" {green}[SM]{default} You have to be alive to change the mirror and third person mode."
+	}
+
+	"Mirror mode enabled"
+	{
+		"en"			" {green}[SM]{default} Mirror mode {green}enabled{default}."
+	}
+
+	"Mirror mode off"
+	{
+		"en"			" {green}[SM]{default} Mirror mode {green}disabled{default}."
+	}
+
+	"Admin toggled thirdsperson"
+	{
+		"#format"		"{1:N}"
+		"en"			" {green}[SM]{default} You have activated {green}{1}{default} thirdperson mode."
+	}
+
+	"Admin toggled firstsperson"
+	{
+		"#format"		"{1:N}"
+		"en"			" {green}[SM]{default} You have disabled {green}{1}{default} thirdperson mode."
+	}
+
+	"Admin toggled thirdsperson client"
+	{
+		"#format"		"{1:N}"
+		"en"			" {green}[SM]{default} The {green}{1}{default} admin activated your Tiperson mode."
+	}
+
+	"Admin toggled firstsperson client"
+	{
+		"#format"		"{1:N}"
+		"en"			" {green}[SM]{default} The {green}{1}{default} admin disabled your Tiperson mode."
+	}
+
+	"Admin toggled mirror on"
+	{
+		"#format"		"{1:N}"
+		"en"			" {green}[SM]{default} You have activated {green}{1}{default} Mirror mode."
+	}
+
+	"Admin toggled mirror off"
+	{
+		"#format"		"{1:N}"
+		"en"			" {green}[SM]{default} You have disabled {green}{1}{default} Mirror mode."
+	}
+
+	"Admin toggled mirror on client"
+	{
+		"#format"		"{1:N}"
+		"en"			" {green}[SM]{default} The {green}{1}{default} admin activated your Mirror mode."
+	}
+
+	"Admin toggled mirror off client"
+	{
+		"#format"		"{1:N}"
+		"en"			" {green}[SM]{default} The {green}{1}{default} admin disabled your Mirror mode."
+	}
+}
