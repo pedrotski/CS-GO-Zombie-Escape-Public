@@ -1,0 +1,39 @@
+"Games"
+{
+	"csgo"
+	{
+		"Signatures"
+		{
+			"IsWhiteListedCmd"
+			{
+				"library"	"engine"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x10\x53\x56\x57\x8B\x3D\x2A\x2A\x2A\x2A"
+				"linux"		"\x55\x89\xE5\x57\x56\x53\x83\xEC\x3C\xA1\x2A\x2A\x2A\x2A\x8B\x5D\x08"
+			}
+		}
+		"Functions"
+		{
+			"IsWhiteListedCmd"
+			{
+				"signature"	"IsWhiteListedCmd"
+				"return"	"bool"
+				"this"		"ignore"
+				"arguments"
+				{
+					"command"
+					{
+						"type"	"charptr"
+					}
+				}
+				"windows"
+				{
+					"callconv"	"fastcall"
+				}
+				"linux"
+				{
+					"callconv"	"cdecl"
+				}
+			}
+		}
+	}
+}

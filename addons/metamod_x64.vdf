@@ -1,5 +1,5 @@
 "Plugin"
 {
-	"file"	"csgo/addons/metamod/bin/win64/server"
+	"file"	"csgo/addons/metamod/bin/linux64/server"
 }
 
