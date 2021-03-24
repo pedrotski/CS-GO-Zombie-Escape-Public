@@ -15,3 +15,5 @@ It includes:
 
 Download maps from here: https://www.gcgfast.com/csgo/maps/
 And then place them in your csgo/maps directory.
+
+If you need a FastDL for your community and don't have your own, contact me and we can work something out!
