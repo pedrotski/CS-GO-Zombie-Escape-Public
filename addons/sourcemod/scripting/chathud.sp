@@ -8,7 +8,7 @@
 #pragma newdecls required // let's go new syntax! 
 
 #define MAXLENGTH_INPUT 		128
-#define PLUGIN_VERSION 		"1.1-B"
+#define PLUGIN_VERSION 		"1.2-B"
 
 int color_hudA = 0;
 int color_hudB = 0;
@@ -169,12 +169,14 @@ public void Event_RoundStart(Handle event, const char[] name, bool dontBroadcast
 {
 	DeleteTimerA();
 	DeleteTimerB();
+	hudAB = 1;
 }
 
 public void Event_RoundEnd(Handle event, const char[] name, bool dontBroadcast)
 {
 	DeleteTimerA();
 	DeleteTimerB();
+	hudAB = 1;
 }
 
 public void DeleteTimerA()
@@ -195,189 +197,216 @@ public void DeleteTimerB()
 	}
 }
 
+char Blacklist[][] = {
+	"recharge", "recast", "cooldown", "cool"
+};
+
+public bool CheckString(char[] string)
+{
+	for (int i = 0; i < sizeof(Blacklist); i++)
+	{
+		if(StrContains(string, Blacklist[i], false) != -1)
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
 //public Action Chat(int client, const char[] command, int argc)
 public Action SayConsole(int client, int args)
 {
-	if(client)
+	if (client==0)
 	{
-		return Plugin_Continue;
-	}
 
-	char ConsoleChat[MAXLENGTH_INPUT], FilterText[sizeof(ConsoleChat)+1], ChatArray[32][MAXLENGTH_INPUT];
-	int consoleNumber, filterPos;
-	bool blocked = (KvGetNum(kv, "blocked", 0)?true:false);
-	bool isCountable;
-	char buffer[255], buffer2[255], soundp[255], soundt[255];
-	char sText[256];
-	char hText[256];
-	char sCountryTag[3];
-	char sIP[26];
-	
-	GetCmdArgString(ConsoleChat, sizeof(ConsoleChat));
-	StripQuotes(ConsoleChat);
-	
-	KvGetString(kv, "sound", soundp, sizeof(soundp), "default");
-	if(StrEqual(soundp, "default"))
-		Format(soundt, 255, "common/talk.wav");
-	else
-		Format(soundt, 255, soundp);
-	
-	if(kv == INVALID_HANDLE)
-	{
-		ReadT();
-	}
-	
-	for (int i = 0; i < sizeof(ConsoleChat); i++) 
-	{
-		if (IsCharAlpha(ConsoleChat[i]) || IsCharNumeric(ConsoleChat[i]) || IsCharSpace(ConsoleChat[i])) 
+		char ConsoleChat[MAXLENGTH_INPUT], FilterText[sizeof(ConsoleChat)+1], ChatArray[32][MAXLENGTH_INPUT];
+		char hText[MAXLENGTH_INPUT];
+		char buffer[MAXLENGTH_INPUT], bufferhud[MAXLENGTH_INPUT], soundp[255], soundt[255];
+		char sText[MAXLENGTH_INPUT];
+		char sCountryTag[3];
+		char sIP[26];
+		int consoleNumber, filterPos;
+		bool isCountable;
+
+		GetCmdArgString(ConsoleChat, sizeof(ConsoleChat));
+		StripQuotes(ConsoleChat);
+
+		if(kv == INVALID_HANDLE)
 		{
-			FilterText[filterPos++] = ConsoleChat[i];
+			ReadT();
 		}
-	}
-	
-	FilterText[filterPos] = '\0';
-	TrimString(FilterText);
-	
-	int words = ExplodeString(FilterText, " ", ChatArray, sizeof(ChatArray), sizeof(ChatArray[]));
 
-	if(words == 1)
-	{
-		if(StringToInt(ChatArray[0]) != 0)
+		//CheckCountable
+		for (int i = 0; i < sizeof(ConsoleChat); i++) 
 		{
-			isCountable = true;
-			consoleNumber = StringToInt(ChatArray[0]);
-		}
-	}
-
-	for(int i = 0; i <= words; i++)
-	{
-		if(StringToInt(ChatArray[i]) != 0)
-		{
-			if(i + 1 <= words && (StrEqual(ChatArray[i + 1], "s", false) || (CharEqual(ChatArray[i + 1][0], 's') && CharEqual(ChatArray[i + 1][1], 'e'))))
+			if (IsCharAlpha(ConsoleChat[i]) || IsCharNumeric(ConsoleChat[i]) || IsCharSpace(ConsoleChat[i])) 
 			{
-				consoleNumber = StringToInt(ChatArray[i]);
-				isCountable = true;
-			}
-			if(!isCountable && i + 2 <= words && (StrEqual(ChatArray[i + 2], "s", false) || (CharEqual(ChatArray[i + 2][0], 's') && CharEqual(ChatArray[i + 2][1], 'e'))))
-			{
-				consoleNumber = StringToInt(ChatArray[i]);
-				isCountable = true;
+				FilterText[filterPos++] = ConsoleChat[i];
 			}
 		}
 
-		if(!isCountable)
-		{
-			char word[MAXLENGTH_INPUT];
-			strcopy(word, sizeof(word), ChatArray[i]);
-			int len = strlen(word);
+		FilterText[filterPos] = '\0';
+		TrimString(FilterText);
 
-			if(IsCharNumeric(word[0]))
+		if(CheckString(ConsoleChat))
+		{
+			int words = ExplodeString(FilterText, " ", ChatArray, sizeof(ChatArray), sizeof(ChatArray[]));
+
+			if(words == 1)
 			{
-				if(IsCharNumeric(word[1]))
+				if(StringToInt(ChatArray[0]) != 0)
 				{
-					if(IsCharNumeric(word[2]))
+					isCountable = true;
+					consoleNumber = StringToInt(ChatArray[0]);
+				}
+			}
+
+			for(int i = 0; i <= words; i++)
+			{
+				if(StringToInt(ChatArray[i]) != 0)
+				{
+					if(i + 1 <= words && (StrEqual(ChatArray[i + 1], "s", false) || (CharEqual(ChatArray[i + 1][0], 's') && CharEqual(ChatArray[i + 1][1], 'e'))))
 					{
-						if(CharEqual(word[3], 's'))
-						{
-							consoleNumber = StringEnder(word, 5, len);
-							isCountable = true;
-						}
+						consoleNumber = StringToInt(ChatArray[i]);
+						isCountable = true;
 					}
-					else if(CharEqual(word[2], 's'))
+					if(!isCountable && i + 2 <= words && (StrEqual(ChatArray[i + 2], "s", false) || (CharEqual(ChatArray[i + 2][0], 's') && CharEqual(ChatArray[i + 2][1], 'e'))))
 					{
-						consoleNumber = StringEnder(word, 4, len);
+						consoleNumber = StringToInt(ChatArray[i]);
 						isCountable = true;
 					}
 				}
-				else if(CharEqual(word[1], 's'))
+
+				if(!isCountable)
 				{
-					consoleNumber = StringEnder(word, 3, len);
-					isCountable = true;
+					char word[MAXLENGTH_INPUT];
+					strcopy(word, sizeof(word), ChatArray[i]);
+					int len = strlen(word);
+	
+					if(IsCharNumeric(word[0]))
+					{
+						if(IsCharNumeric(word[1]))
+						{
+							if(IsCharNumeric(word[2]))
+							{
+								if(CharEqual(word[3], 's'))
+								{
+									consoleNumber = StringEnder(word, 5, len);
+									isCountable = true;
+								}
+							}
+							else if(CharEqual(word[2], 's'))
+							{
+								consoleNumber = StringEnder(word, 4, len);
+								isCountable = true;
+							}
+						}
+						else if(CharEqual(word[1], 's'))
+						{
+							consoleNumber = StringEnder(word, 3, len);
+							isCountable = true;
+						}
+					}
+
+					if(isCountable)
+					{
+						return Plugin_Continue;
+					}
 				}
 			}
 		}
-	}
-
-	if(blocked)
-	{
-		KvRewind(kv);
-		return Plugin_Stop;
-	}
-
-	if(!KvJumpToKey(kv, ConsoleChat))
-	{
-		KvRewind(kv);
-		KvJumpToKey(kv, ConsoleChat, true);
-		Format(buffer, sizeof(buffer), "{red}Console: {green}%s", ConsoleChat);
-		KvSetString(kv, "default", buffer);
-		if(isCountable)
+		//exec
+		if(!KvJumpToKey(kv, ConsoleChat))
 		{
-			Format(buffer2, sizeof(buffer2), "%s", ConsoleChat);
-			KvSetString(kv, "hud", buffer2);
-		}
-		KvRewind(kv);
-		KeyValuesToFile(kv, Path);
-		KvJumpToKey(kv, ConsoleChat);
-	}
-
-	if(!StrEqual(soundp, "none"))
-	{
-		if(!csgo || StrEqual(soundp, "default")) EmitSoundToAll(soundt);
-		else EmitSoundToAllAny(soundt);
-	}
-
-	for(int j = 1 ; j < MaxClients; j++)
-		if(IsClientInGame(j))
-		{
-			GetClientIP(j, sIP, sizeof(sIP));
-			GeoipCode2(sIP, sCountryTag);
-			KvGetString(kv, sCountryTag, sText, sizeof(sText), "LANGMISSING");
-
-			if (StrEqual(sText, "LANGMISSING")) KvGetString(kv, "default", sText, sizeof(sText));
-				
-			CPrintToChat(j, sText);
+			KvRewind(kv);
+			KvJumpToKey(kv, ConsoleChat, true);
+			Format(buffer, sizeof(buffer), "{red}Console: {green}%s", ConsoleChat);
+			Format(bufferhud, sizeof(bufferhud), "%s", ConsoleChat);
+			KvSetString(kv, "default", buffer);
+			if(isCountable)	KvSetString(kv, "hud", bufferhud);
+			KvRewind(kv);
+			KeyValuesToFile(kv, Path);
+			KvJumpToKey(kv, ConsoleChat);
 		}
 
-	if(KvJumpToKey(kv, "hinttext"))
-	{
-		for(int j = 1 ; j < MaxClients; j++)
-			if(IsClientInGame(j))
+		bool blocked = (KvGetNum(kv, "blocked", 0)?true:false);
+
+		if(blocked)
+		{
+			KvRewind(kv);
+			return Plugin_Stop;
+		}
+
+		KvGetString(kv, "hud", hText, sizeof(hText), "HUDMISSING");
+		KvGetString(kv, "sound", soundp, sizeof(soundp), "default");
+		if(StrEqual(soundp, "default"))
+			Format(soundt, 255, "common/talk.wav");
+		else
+			Format(soundt, 255, soundp);
+
+		for(int i = 1 ; i < MaxClients; i++)
+			if(IsClientInGame(i))
 			{
-				GetClientIP(j, sIP, sizeof(sIP));
+				GetClientIP(i, sIP, sizeof(sIP));
 				GeoipCode2(sIP, sCountryTag);
 				KvGetString(kv, sCountryTag, sText, sizeof(sText), "LANGMISSING");
 
 				if (StrEqual(sText, "LANGMISSING")) KvGetString(kv, "default", sText, sizeof(sText));
 				
-				PrintHintText(j, sText);
+				CPrintToChat(i, sText);
 			}
-	}
 
-	if(isCountable)
-	{
-		if(hudAB == 1)
+		if(!StrEqual(soundp, "none"))
 		{
-			KvGetString(kv, "hud", hText, sizeof(hText), "default");
-
-			number = consoleNumber;
-			onumber = consoleNumber;
-			InitCountDownA(hText);
-			KvRewind(kv);
-			return Plugin_Handled;
+			if(!csgo || StrEqual(soundp, "default")) EmitSoundToAll(soundt);
+			else EmitSoundToAllAny(soundt);
 		}
-		if(hudAB == 2)
+
+		if(KvJumpToKey(kv, "hinttext"))
 		{
-			KvGetString(kv, "hud", hText, sizeof(hText), "default");
+			for(int i = 1 ; i < MaxClients; i++)
+			{
+				if(IsClientInGame(i))
+				{
+					GetClientIP(i, sIP, sizeof(sIP));
+					GeoipCode2(sIP, sCountryTag);
+					KvGetString(kv, sCountryTag, sText, sizeof(sText), "LANGMISSING");
 
-			number2 = consoleNumber;
-			onumber2 = consoleNumber;
-			InitCountDownB(hText);
-			KvRewind(kv);
-			return Plugin_Handled;
+					if (StrEqual(sText, "LANGMISSING")) KvGetString(kv, "default", sText, sizeof(sText));
+				
+					PrintHintText(i, sText);
+				}
+			}
 		}
+
+		if(isCountable)
+		{
+			if (StrEqual(hText, "HUDMISSING"))
+			{
+				KvRewind(kv);
+				return Plugin_Stop;
+			}
+			if(hudAB == 1)
+			{
+				number = consoleNumber;
+				onumber = consoleNumber;
+				InitCountDownA(hText);
+				KvRewind(kv);
+				return Plugin_Handled;
+			}
+			if(hudAB == 2)
+			{
+				number2 = consoleNumber;
+				onumber2 = consoleNumber;
+				InitCountDownB(hText);
+				KvRewind(kv);
+				return Plugin_Handled;
+			}
+		}
+		KvRewind(kv);
+		return Plugin_Stop;
 	}
-	KvRewind(kv);
-	return Plugin_Handled;
+	return Plugin_Continue;
 }
 
 public bool CharEqual(int a, int b)
@@ -423,12 +452,12 @@ public void InitCountDownA(char[] text)
 	}
 
 	TimerPack.WriteString(text2);
+	hudAB = 2;
 
 	for (int i = 1; i <= MAXPLAYERS + 1; i++)
 	{
 		if(IsValidClient(i))
 		{
-			hudAB = 2;
 			SendHudMsgA(i, text2);
 		}
 	}
@@ -441,6 +470,7 @@ public Action RepeatMSGA(Handle timer, Handle pack)
 	{
 		DeleteTimerA();
 		color_hudA = 0;
+		hudAB = 1;
 		for (int i = 1; i <= MAXPLAYERS + 1; i++)
 		{
 			if(IsValidClient(i))
@@ -505,12 +535,12 @@ public void InitCountDownB(char[] text)
 	}
 
 	TimerPack.WriteString(text2);
+	hudAB = 1;
 
 	for (int i = 1; i <= MAXPLAYERS + 1; i++)
 	{
 		if(IsValidClient(i))
 		{
-			hudAB = 1;
 			SendHudMsgB(i, text2);
 		}
 	}
@@ -523,6 +553,7 @@ public Action RepeatMSGB(Handle timer, Handle pack)
 	{
 		DeleteTimerB();
 		color_hudB = 0;
+		hudAB = 2;
 		for (int i = 1; i <= MAXPLAYERS + 1; i++)
 		{
 			if(IsValidClient(i))
