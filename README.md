@@ -1,5 +1,5 @@
 # CS-GO-Zombie-Escape-Public
-A ready to go Zombie Escape base install you can copy to your Linux or Windows CS GO server.
+A ready to go Zombie Escape Server base install you can copy to your Linux or Windows CS GO server.
 
 It includes:
 * Sourcemod 1.10 - https://www.sourcemod.net/
