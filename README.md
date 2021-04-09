@@ -1,6 +1,12 @@
 # CS-GO-Zombie-Escape-Public
 A ready to go Zombie Escape Server base install you can copy to your Linux or Windows CS GO server.
 
+This is made with the intent of helping a new server owner getting started with ZE. This will hopefully bring more interest to our community as a whole. The more players and people interested, the better it is for everyone!
+
+We use the Anubis Zombie Escape fork as it contains some other functions baked right into it that reduces the need for more plugins. This is perfectly capable for 64 players. 
+
+Please remember that this is a BASE install. There will be other things that you need on your server. Most ZE servers end up with around 100+ plugins by the time they are "finished". This is to just get you started.
+
 It includes:
 * Sourcemod 1.10 - https://www.sourcemod.net/
 * Metamod 1.11 - http://metamodsource.net/
@@ -23,5 +29,11 @@ And then place them in your csgo/maps directory.
 For Stripper, Entwatch or Bosshud, get them from here: 
 * https://github.com/pedrotski/Zombie-Escape-Configs-CS-GO
 * https://github.com/gflclan-cs-go-ze/ZE-Configs
+
+If you're looking for more Zombie Escape specific plugins then find them here (Entwatch, !music plugins for ZE etc)
+* https://github.com/darkerz7/CSGO-Plugins
+* https://github.com/IT-KiLLER/ze-plugins
+* https://github.com/oylsister/Zombie-Escpe-Thailand-Community/tree/main/Plugins
+* https://gogs.botox.bz/CSSZombieEscape/sm-plugins
 
 If you need a Help, FastDL or anything for your community and don't have your own, contact me on Discord and we can work something out! We are more than willing to help you get started. Just visit www.ghostcap.com to join.
