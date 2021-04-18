@@ -26,9 +26,11 @@ Simply copy to the root of your CSGO dir, Add the convars you need to bspconvar_
 Download maps from here: https://www.gcgfast.com/csgo/maps/
 And then place them in your csgo/maps directory.
 
-For Stripper, Entwatch or Bosshud, get them from here: 
+For Stripper, Entwatch or Bosshud configs, get them from here: 
 * https://github.com/pedrotski/Zombie-Escape-Configs-CS-GO
 * https://github.com/gflclan-cs-go-ze/ZE-Configs
+* https://github.com/oylsister/ZombieEscape-Map-Config
+* https://github.com/kOEN-iwnl/Public-Strippers
 
 If you're looking for more Zombie Escape specific plugins then find them here (Entwatch, !music plugins for ZE etc)
 * https://github.com/darkerz7/CSGO-Plugins
