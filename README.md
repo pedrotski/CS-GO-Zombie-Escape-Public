@@ -20,6 +20,7 @@ It includes:
 * BSP Custom Whitelist - https://github.com/Vauff/bspconvar_custom_whitelist
 * Movment Unlocker - https://forums.alliedmods.net/showthread.php?t=255298
 * Map Change Crash Fixer - https://github.com/Ilusion9/csgo-fix-mapchange-crash-sm
+* A2S_Rules Hax - https://forums.alliedmods.net/showthread.php?t=236521
 
 Simply copy to the root of your CSGO dir, Add the convars you need to bspconvar_custom_whitelist.txt in the root of your CSGO dir and you are done.
 

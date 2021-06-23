@@ -1,0 +1,100 @@
+"Games"
+{
+	"csgo"
+	{
+		"Addresses"
+		{
+			"NET_SendPacket"
+			{
+				"windows"
+				{
+					"signature"		"NET_SendPacket"
+				}
+				"linux"
+				{
+					"signature" 	"NET_SendPacket"
+				}
+			}
+			"UpdateMasterServerRules"
+			{
+				"windows"
+				{
+					"signature"		"UpdateMasterServerRules"
+				}
+				"linux"
+				{
+					"signature"		"UpdateMasterServerRules"
+				}
+			}
+			"ServerNotifyVarChangeCallback"
+			{
+				"windows"
+				{
+					"signature"		"ServerNotifyVarChangeCallback"
+				}
+				"linux"
+				{
+					"signature"		"ServerNotifyVarChangeCallback"
+				}
+			}
+		}
+		"Offsets"
+		{
+			"NET_SendPacket_Offset"
+			{
+				"windows"	"23"
+				"linux"		"23"
+			}
+			"UpdateMasterServerRules_Offset"
+			{
+				"windows"	"160"//2 bytes nop
+				"linux"		"191"//2 bytes nop
+			}
+			"ServerNotifyVarChangeCallback_Offset"
+			{
+				"windows"	"48"//2 bytes nop
+				"linux"		"75"//2 bytes nop
+			}
+			"NET_SendPacket_Byte"
+			{
+				"windows"	"1200"
+				"linux"		"1200"
+			}
+			"UpdateMasterServerRules_Byte"
+			{
+				"windows"	"116"
+				"linux"		"116"
+			}
+			"ServerNotifyVarChangeCallback_Byte"
+			{
+				"windows"	"116"
+				"linux"		"116"
+			}
+		}
+		"Signatures"
+		{
+			"NET_SendPacket"
+			{
+				"library"		"engine"
+				// "[NET] Cannot send %d-byte packet to %s.  MTU is %u.  %02x %02x %02x %02x %02x\n"
+				"windows"		"\x55\x8B\xEC\x83\xE4\xF8\x83\xEC\x4C\x53\x56\x57\x8B\x7D\x0C"
+				// _Z14NET_SendPacketP11INetChanneliRK10ns_addressPKhiP8bf_writebj
+				"linux" 		"\x55\x89\xE5\x57\x56\x53\x81\xEC\x4C\x01\x00\x00\x8B\x75\x14"
+			}
+			"UpdateMasterServerRules"
+			{
+				"library"		"engine"
+				"windows"		"\x55\x8B\xEC\x51\x53\x56\x57\x8B\xF9\x89\x7D\xFC"
+				// _ZN11CBaseServer23UpdateMasterServerRulesEv
+				"linux" 		"\x55\x89\xE5\x57\x56\x53\x83\xEC\x2C\x8B\x45\x08\x80\xB8\xB8\x02\x00\x00\x00"
+			}
+			"ServerNotifyVarChangeCallback"
+			{
+				"library"		"engine"
+				"windows"		"\x55\x8B\xEC\x56\x8B\x75\x08\x8B\xCE\x68\x00\x01\x00\x00"
+				// _ZL29ServerNotifyVarChangeCallbackP7IConVarPKcf
+				"linux" 		"\x55\x89\xE5\x53\x83\xEC\x14\x8B\x5D\x08\x8B\x03\xC7\x44\x24\x04\x00\x01\x00\x00"
+			}
+		}
+	}
+}
