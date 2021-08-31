@@ -1,9 +1,0 @@
-"Refract"
-{
-	"$model" 1
-	"$refractamount" "0"
-	"$bluramount" "0"
-	"$REFRACTTINT" "{50 50 150}"
-	"$REFRACTTINTtexture" "overlays/zr/humans_win"
-	"$scale" "[1 1]"
-}

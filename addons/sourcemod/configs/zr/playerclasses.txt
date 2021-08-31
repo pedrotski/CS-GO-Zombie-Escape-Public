@@ -21,6 +21,7 @@
 //                                      1 - Admins only
 //                                      2 - Mother zombies only
 // group                    text        Restrict class to member of this SourceMod group. Leave blank for no restriction.
+// sm_flags		    text	Restrict class to client of this SourceMod admin flag. Leave blank for no restriction.
 // name                     text        The class name used in class menu.
 // description              text        The class description used in class menu.
 // model_path               text        Path to model to use. Relative to cstrike folder.
@@ -66,7 +67,7 @@
     // Zombie classes
     //
     // ------------------------------------------
-    "Zumbi_Classico"
+    "zombie_classic"
     {
         // General
         "enabled"               "yes"
@@ -74,13 +75,13 @@
         "team_default"          "yes"
         "flags"                 "0"
         "group"                 ""
+		"sm_flags"				""
         
         "name"                  "Classic"
         "description"           "Need brains!!! Arrrrggghh!"
         
         // Model
-        "model_path"            "models/player/mapeadores/morell/ghoul/ghoulfix.mdl"
-        "arms_path"             "models/player/colateam/zombie1/arms.mdl" // arms model for this class
+        "model_path"            "models/player/kuristaja/zombies/gozombie/gozombie.mdl"
         "model_skin_index"      "0"
         "alpha_initial"         "255"
         "alpha_damaged"         "255"
@@ -93,7 +94,7 @@
         
         // Effects
         "has_napalm"            "no"
-        "napalm_time"           "10.0"
+        "napalm_time"           "5.0"
         
         // Player behavior
         "immunity_mode"         "none"
@@ -101,18 +102,18 @@
         "immunity_cooldown"     "60"
         "no_fall_damage"        "yes"
         
-        "health"                "12000"
-        "health_regen_interval" "0.0"
-        "health_regen_amount"   "0"
-        "health_infect_gain"    "500"
+        "health"                "7000"
+        "health_regen_interval" "5.0"
+        "health_regen_amount"   "50"
+        "health_infect_gain"    "0"
         "kill_bonus"            "2"
         
-        "speed"                 "350"
-        "knockback"             "3.2"
-        "jump_height"           "1.1"
-        "jump_distance"         "1.2"
+        "speed"                 "310"
+        "knockback"             "3.0"
+        "jump_height"           "1.07"
+        "jump_distance"         "1.0"
     }
-    
+
     "mother_zombie"
     {
         // General
@@ -121,13 +122,13 @@
         "team_default"          "no"
         "flags"                 "2"
         "group"                 ""
+	"sm_flags"				""
         
         "name"                  "Mother zombie"
         "description"           "+HP regen | +Speed | +Jump | -Knockback"
         
         // Model
-        "model_path"            "models/player/mapeadores/morell/ghoul/ghoulfix.mdl"
-        "arms_path"             "models/player/colateam/zombie1/arms.mdl" // arms model for this class
+        "model_path"            "models/player/kuristaja/zombies/gozombie/gozombie.mdl"
         "model_skin_index"      "0"
         "alpha_initial"         "255"
         "alpha_damaged"         "255"
@@ -148,72 +149,25 @@
         "immunity_cooldown"     "60"
         "no_fall_damage"        "yes"
         
-        "health"                "16000"
-        "health_regen_interval" "3"
-        "health_regen_amount"   "10"
-        "health_infect_gain"    "200"
-        "kill_bonus"            "2"
+        "health"                "12000"
+        "health_regen_interval" "5.0"
+        "health_regen_amount"   "100"
+        "health_infect_gain"    "0"
+        "kill_bonus"            "4"
         
-        "speed"                 "390"
-        "knockback"             "2.3"
-        "jump_height"           "1.2"
-        "jump_distance"         "1.3"
+        "speed"                 "310"
+        "knockback"             "3.0"
+        "jump_height"           "1.07"
+        "jump_distance"         "1.0"
     }
-    
-    "mother_zombie_admin"
-    {
-        // General
-        "enabled"               "yes"
-        "team"                  "0"
-        "team_default"          "no"
-        "flags"                 "3"
-        "group"                 ""
-        
-        "name"                  "Admin mother zombie"
-        "description"           "+HP regen | +Speed | +Jump | -Knockback"
-        
-        // Model
-        "model_path"            "models/player/mapeadores/morell/ghoul/ghoulfix.mdl"
-        "arms_path"             "models/player/colateam/zombie1/arms.mdl" // arms model for this class
-        "model_skin_index"      "0"
-        "alpha_initial"         "255"
-        "alpha_damaged"         "255"
-        "alpha_damage"          "0"
-        
-        // Hud
-        "overlay_path"          ""
-        "nvgs"                  "no"
-        "fov"                   "90"
-        
-        // Effects
-        "has_napalm"            "no"
-        "napalm_time"           "3.0"
-        
-        // Player behavior
-        "immunity_mode"         "none"
-        "immunity_amount"       "1"
-        "immunity_cooldown"     "60"
-        "no_fall_damage"        "yes"
-        
-        "health"                "16000"
-        "health_regen_interval" "0.25"
-        "health_regen_amount"   "10"
-        "health_infect_gain"    "1000"
-        "kill_bonus"            "1"
-        
-        "speed"                 "390"
-        "knockback"             "2.3"
-        "jump_height"           "1.2"
-        "jump_distance"         "1.3"
-    }
-    
+
     // ------------------------------------------
     //
     // Human classes
     //
     // ------------------------------------------
     
-    "Humano_Normal-1"
+    "human_normal"
     {
         // General
         "enabled"               "yes"
@@ -221,13 +175,13 @@
         "team_default"          "yes"
         "flags"                 "0"
         "group"                 ""
+		"sm_flags"				""
         
-        "name"                  "Humano Normal 1"
+        "name"                  "Normal Human"
         "description"           "Default Counter-Strike settings"
         
         // Model
-        "model_path"            "models/player/custom_player/legacy/GFLclan/mcwhite/mcwhite.mdl"
-        "arms_path"             "models/player/custom_player/infused/halo4/mchief/mchief_arms.mdl" // arms model for this class
+        "model_path"            "default"
         "model_skin_index"      "0"
         "alpha_initial"         "255"
         "alpha_damaged"         "255"
@@ -246,7 +200,7 @@
         "immunity_mode"         "none"
         "immunity_amount"       "1"
         "immunity_cooldown"     "60"
-        "no_fall_damage"        "yes"
+        "no_fall_damage"        "no"
         
         "health"                "100"
         "health_regen_interval" "0.0"
@@ -258,99 +212,5 @@
         "knockback"             "0"
         "jump_height"           "1.0"
         "jump_distance"         "1.0"
-    }
-    
-    "Humano_Normal-2"
-    {
-        // General
-        "enabled"               "no"
-        "team"                  "1"
-        "team_default"          "yes"
-        "flags"                 "0"
-        "group"                 ""      // Write the name of a SourceMod group for vip players ("zr_vip" for instance), then make it in SourceMod.
-        
-        "name"                  "VIP Human"
-        "description"           "Humano Normal 2"
-        
-        // Model
-        "model_path"            "models/player/custom_player/infused/halo4/mchief/mchief.mdl"
-        "arms_path"             "models/player/custom_player/infused/halo4/mchief/mchief_arms.mdl" // arms model for this class
-        "model_skin_index"      "0"
-        "alpha_initial"         "255"
-        "alpha_damaged"         "255"
-        "alpha_damage"          "0"
-        
-        // Hud
-        "overlay_path"          ""
-        "nvgs"                  "no"
-        "fov"                   "90"
-        
-        // Effects
-        "has_napalm"            "yes"
-        "napalm_time"           "0.0"
-        
-        // Player behavior
-        "immunity_mode"         "none"
-        "immunity_amount"       "1"
-        "immunity_cooldown"     "60"
-        "no_fall_damage"        "yes"
-        
-        "health"                "200"
-        "health_regen_interval" "1.0"
-        "health_regen_amount"   "10"
-        "health_infect_gain"    "0"
-        "kill_bonus"            "1"
-        
-        "speed"                 "300"
-        "knockback"             "0"
-        "jump_height"           "1.2"
-        "jump_distance"         "1.2"
-    }
-    
-    "Humano_Admin"
-    {
-        // General
-        "enabled"               "yes"
-        "team"                  "1"
-        "team_default"          "no"
-        "flags"                 "1"
-        "group"                 ""
-        
-        "name"                  "Humano Admin"
-        "description"           "Human class for admins"
-        
-        // Model
-        "model_path"            "models/player/custom_player/infused/halo4/mchief/mchief.mdl"
-        "arms_path"             "models/player/custom_player/infused/halo4/mchief/mchief_arms.mdl" // arms model for this class
-        "model_skin_index"      "0"
-        "alpha_initial"         "255"
-        "alpha_damaged"         "255"
-        "alpha_damage"          "0"
-        
-        // Hud
-        "overlay_path"          ""
-        "nvgs"                  "no"
-        "fov"                   "90"
-        
-        // Effects
-        "has_napalm"            "yes"
-        "napalm_time"           "0.0"
-        
-        // Player behavior
-        "immunity_mode"         "none"
-        "immunity_amount"       "1"
-        "immunity_cooldown"     "60"
-        "no_fall_damage"        "yes"
-        
-        "health"                "200"
-        "health_regen_interval" "1.0"
-        "health_regen_amount"   "10"
-        "health_infect_gain"    "0"
-        "kill_bonus"            "1"
-        
-        "speed"                 "300"
-        "knockback"             "0"
-        "jump_height"           "1.2"
-        "jump_distance"         "1.2"
     }
 }

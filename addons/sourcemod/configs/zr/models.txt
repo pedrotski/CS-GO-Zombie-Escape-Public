@@ -26,27 +26,11 @@
 
 "models"
 {
-    "Zumbi_Classico"
+    "gozombie"
     {
-        "name"      "ghoulfix"
-        "path"      "models/player/mapeadores/morell/ghoul/"
+        "name"      "gozombie"
+        "path"      "models/player/kuristaja/zombies/gozombie/"
         "team"      "zombies"
-        "access"    "public"
-        "group"     ""
-    }
-    "Humano_Normal-1"
-    {
-        "name"      "mcwhite"
-        "path"      "models/player/custom_player/legacy/GFLclan/mcwhite/"
-        "team"      "humans"
-        "access"    "public"
-        "group"     ""
-    }
-    "Humano_Normal-2"
-    {
-        "name"      "mchief"
-        "path"      "models/player/custom_player/infused/halo4/mchief/"
-        "team"      "humans"
         "access"    "public"
         "group"     ""
     }

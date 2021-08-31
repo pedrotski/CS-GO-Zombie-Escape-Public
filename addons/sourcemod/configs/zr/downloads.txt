@@ -52,102 +52,14 @@ sound/zr/zombie_die3.mp3
 sound/ambient/zr/zr_ambience.mp3
 sound/zr/fz_scream1.mp3
 
-// Round End Sounds Humans Win
 
-sound/roundend/humanswin/humans_win1.mp3
-sound/roundend/humanswin/humans_win2.mp3
-sound/roundend/humanswin/humans_win3.mp3
-sound/roundend/humanswin/humans_win4.mp3
+// -- GOZOMBIE
 
-// Round End Sounds Zombie Wim
+materials/models/player/kuristaja/zombies/gozombie/csgo_zombie_skin.vmt
+materials/models/player/kuristaja/zombies/gozombie/csgo_zombie_normal.vtf
 
-sound/roundend/zombiewin/zombie_win1.mp3
-sound/roundend/zombiewin/zombie_win2.mp3
-sound/roundend/zombiewin/zombie_win3.mp3
-sound/roundend/zombiewin/zombie_win4.mp3
-
-// Zumbi_Classico
-
-models/player/mapeadores/morell/ghoul/ghoulfix.dx90.vtx
-models/player/mapeadores/morell/ghoul/ghoulfix.mdl
-models/player/mapeadores/morell/ghoul/ghoulfix.phy
-models/player/mapeadores/morell/ghoul/ghoulfix.vvd
-materials/models/player/mapeadores/morell/ghoulfix/body.vmt
-materials/models/player/mapeadores/morell/ghoulfix/body.vtf
-materials/models/player/mapeadores/morell/ghoulfix/body_bump.vtf
-materials/models/player/mapeadores/morell/ghoulfix/glowing_body.vmt
-materials/models/player/mapeadores/morell/ghoulfix/glowing_body.vtf
-materials/models/player/mapeadores/morell/ghoulfix/glowing_pants.vmt
-materials/models/player/mapeadores/morell/ghoulfix/pants.vmt
-materials/models/player/mapeadores/morell/ghoulfix/pants.vtf
-
-models/player/colateam/zombie1/arms.dx90.vtx
-models/player/colateam/zombie1/arms.mdl
-models/player/colateam/zombie1/arms.vvd
-materials/models/player/colateam/zombie1/slow_body.vmt
-materials/models/player/colateam/zombie1/slow_body.vtf
-materials/models/player/colateam/zombie1/slow_body_bump.vtf
-materials/models/player/colateam/zombie1/slow_pants.vmt
-materials/models/player/colateam/zombie1/slow_pants.vtf
-
-// Humano_Normal-1
-
-models/player/custom_player/legacy/GFLclan/mcwhite/mcwhite.dx90.vtx
-models/player/custom_player/legacy/GFLclan/mcwhite/mcwhite.mdl
-models/player/custom_player/legacy/GFLclan/mcwhite/mcwhite.phy
-models/player/custom_player/legacy/GFLclan/mcwhite/mcwhite.vvd
-materials/models/player/custom/GFLclan/mcwhite/detail.vtf
-materials/models/player/custom/GFLclan/mcwhite/light.vmt
-materials/models/player/custom/GFLclan/mcwhite/light.vtf
-materials/models/player/custom/GFLclan/mcwhite/mkvi.vmt
-materials/models/player/custom/GFLclan/mcwhite/mkvi.vtf
-materials/models/player/custom/GFLclan/mcwhite/mkvivisor.vmt
-materials/models/player/custom/GFLclan/mcwhite/mkvi_bump.vtf
-materials/models/player/custom/GFLclan/mcwhite/mkvi_exp.vtf
-
-// Humano_Normal-2
-
-models/player/custom_player/infused/halo4/mchief/mchief.dx90.vtx
-models/player/custom_player/infused/halo4/mchief/mchief.mdl
-models/player/custom_player/infused/halo4/mchief/mchief.phy
-models/player/custom_player/infused/halo4/mchief/mchief.vvd
-models/player/custom_player/infused/halo4/mchief/mchief_arms.dx90.vtx
-models/player/custom_player/infused/halo4/mchief/mchief_arms.mdl
-models/player/custom_player/infused/halo4/mchief/mchief_arms.vvd
-models/player/custom_player/infused/halo4/mchief/mchief_c.dx90.vtx
-models/player/custom_player/infused/halo4/mchief/mchief_c.mdl
-models/player/custom_player/infused/halo4/mchief/mchief_c.phy
-models/player/custom_player/infused/halo4/mchief/mchief_c.vvd
-materials/models/infused/halo4/mchief/decals.vmt
-materials/models/infused/halo4/mchief/decals.vtf
-materials/models/infused/halo4/mchief/decalsecond.vtf
-materials/models/infused/halo4/mchief/storm_unsc_decals_eagle_crest.vmt
-materials/models/infused/halo4/mchief/storm_unsc_decals_eagle_crest_diff.vtf
-materials/models/infused/halo4/mchief/techsuit_d.vmt
-materials/models/infused/halo4/mchief/techsuit_d.vtf
-materials/models/infused/halo4/mchief/techsuit_n.vtf
-materials/models/infused/halo4/mchief/texture_odst_arm.vmt
-materials/models/infused/halo4/mchief/texture_odst_arm.vtf
-materials/models/infused/halo4/mchief/texture_odst_arm_n.vtf
-materials/models/infused/halo4/mchief/texture_odst_chest.vmt
-materials/models/infused/halo4/mchief/texture_odst_chest.vtf
-materials/models/infused/halo4/mchief/texture_odst_chest_n.vtf
-materials/models/infused/halo4/mchief/texture_odst_helmet.vmt
-materials/models/infused/halo4/mchief/texture_odst_helmet.vtf
-materials/models/infused/halo4/mchief/texture_odst_helmet_n.vtf
-materials/models/infused/halo4/mchief/texture_odst_legs.vmt
-materials/models/infused/halo4/mchief/texture_odst_legs.vtf
-materials/models/infused/halo4/mchief/texture_odst_legs_n.vtf
-materials/models/infused/halo4/mchief/texture_odst_shoulder.vmt
-materials/models/infused/halo4/mchief/texture_odst_shoulder.vtf
-materials/models/infused/halo4/mchief/texture_odst_shoulder_n.vtf
-materials/models/infused/halo4/mchief/visor.vmt
-materials/models/infused/halo4/mchief/fulltint/decals.vmt
-materials/models/infused/halo4/mchief/fulltint/storm_unsc_decals_eagle_crest.vmt
-materials/models/infused/halo4/mchief/fulltint/techsuit_d.vmt
-materials/models/infused/halo4/mchief/fulltint/texture_odst_arm.vmt
-materials/models/infused/halo4/mchief/fulltint/texture_odst_chest.vmt
-materials/models/infused/halo4/mchief/fulltint/texture_odst_helmet.vmt
-materials/models/infused/halo4/mchief/fulltint/texture_odst_legs.vmt
-materials/models/infused/halo4/mchief/fulltint/texture_odst_shoulder.vmt
-materials/models/infused/halo4/mchief/fulltint/visor.vmt
+// Player model
+models/player/kuristaja/zombies/gozombie/gozombie.dx90.vtx
+models/player/kuristaja/zombies/gozombie/gozombie.mdl
+models/player/kuristaja/zombies/gozombie/gozombie.phy
+models/player/kuristaja/zombies/gozombie/gozombie.vvd

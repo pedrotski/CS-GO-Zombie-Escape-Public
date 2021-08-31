@@ -5,7 +5,9 @@ This is made with the intent of helping a new server owner getting started with 
 
 We use the Anubis Zombie Escape fork as it contains some other functions baked right into it that reduces the need for more plugins. This is perfectly capable for 64 players. 
 
-Please remember that this is a BASE install. There will be other things that you need on your server. Most ZE servers end up with around 100+ plugins by the time they are "finished". This is to just get you started.
+Please remember that this is a BASE install that contains a few fixes. There will be other things that you need on your server. Most ZE servers end up with around 100+ plugins by the time they are "finished". This is to just get you started.
+
+LAST UPDATED: 31/08/2021
 
 It includes:
 * Sourcemod 1.10 - https://www.sourcemod.net/
@@ -15,12 +17,17 @@ It includes:
 * Hint Color Message Fix - https://github.com/Franc1sco/FixHintColorMessages
 * Dhooks2 - https://github.com/peace-maker/DHooks2
 * Arms Fix 
+* Noblock
 * ZR Classfix 
+* ZR InfectionArmor
+* ZR Noend
+* ZR Teams
 * CSGO Fixes - https://github.com/Vauff/CSGOFixes-SP
 * BSP Custom Whitelist - https://github.com/Vauff/bspconvar_custom_whitelist
 * Movment Unlocker - https://forums.alliedmods.net/showthread.php?t=255298
 * Map Change Crash Fixer - https://github.com/Ilusion9/csgo-fix-mapchange-crash-sm
 * A2S_Rules Hax - https://forums.alliedmods.net/showthread.php?t=236521
+* Zombie Reloaded Anubis/Franug-Edition- https://github.com/Stewart-Anubis/sm-zombiereloaded-3-Franug-Edition
 
 Simply copy to the root of your CSGO dir, Add the convars you need to bspconvar_custom_whitelist.txt in the root of your CSGO dir and you are done.
 
