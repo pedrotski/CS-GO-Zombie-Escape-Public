@@ -1,4 +1,4 @@
-# CS-GO-Zombie-Escape-Public
+# CSGO Zombie Escape Mod Server (Ready To Use)
 A ready to go Zombie Escape Server base install you can copy to your Linux or Windows CS GO server.
 
 This is made with the intent of helping a new server owner getting started with ZE. This will hopefully bring more interest to our community as a whole. The more players and people interested, the better it is for everyone!
