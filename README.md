@@ -11,7 +11,7 @@ This is a major update compared to the last version so some configs have changed
 It includes:
 * Sourcemod 1.10 - https://www.sourcemod.net/
 * Metamod 1.11 - http://metamodsource.net/
-* Stripper Git 129 - http://www.bailopan.net/stripper/snapshots/1.2/
+* Stripper Git (129 Windows, 135 Linux) - http://www.bailopan.net/stripper/snapshots/1.2/
 * Chat Hud Countdown Translator Anubis-Edition - https://github.com/Stewart-Anubis/Chat-Hud-Countdown-Translator-Anubis-Edition
 * Hint Color Message Fix - https://github.com/Franc1sco/FixHintColorMessages
 * Dhooks2 - https://github.com/peace-maker/DHooks2
