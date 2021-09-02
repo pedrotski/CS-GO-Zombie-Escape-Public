@@ -21,7 +21,7 @@ public void OnPluginStart()
 {
 	HookEvent("player_spawn", Event_PlayerSpawn);
 	
-	HookEvent("round_start", Event_RoundStart, EventHookMode_Pre);
+	HookEvent("round_prestart", Event_RoundStart, EventHookMode_Pre);
 }
 
 Action Event_PlayerSpawn(Event event, const char[] name, bool dontBroadcast)
