@@ -2,139 +2,131 @@
 #include <sdktools>
 #include <zombiereloaded>
 
-public Plugin:myinfo =
-{
-	name = "ZR Class Fix",
-	author = "Franc1sco franug",
-	description = "Class Fix",
-	version = "3.3",
-	url = "http://steamcommunity.com/id/franug"
-};
-
-
-new Handle:kv;
-new Handle:hPlayerClasses, String:sClassPath[PLATFORM_MAX_PATH] = "configs/zr/playerclasses.txt";
-
-new Handle:array_classes;
+#pragma newdecls required
+#pragma semicolon 1
 
 enum struct zrClasses
 {
-	int Index;
+	int index;
 	int health;
 	char model[128];
 }
+ArrayList array_classes;
 
-public OnPluginStart()
+ConVar hPlayerClasses;
+
+public Plugin myinfo = 
 {
-	array_classes = CreateArray(130);
-	RegConsoleCmd("sm_testzrfix", Test);
+	name = "ZR Class Fix", 
+	author = "Franc1sco franug", 
+	description = "Class Fix", 
+	version = "3.3", 
+	url = "http://steamcommunity.com/id/franug"
+};
+
+public void OnPluginStart()
+{
+	array_classes = new ArrayList(sizeof(zrClasses));
 }
 
-public Action:Test(client,args)
+public void OnAllPluginsLoaded()
 {
-	zrClasses Items;
-	for(new i=0;i<GetArraySize(array_classes);++i)
-	{
-		GetArrayArray(array_classes, i, Items);
-		ReplyToCommand(client, "Zombie Class index %i with health %i and model %s", Items.Index,Items.health,Items.model);
-	} 
-	
-	return Plugin_Handled;
-}
-
-public OnAllPluginsLoaded()
-{
-	if (hPlayerClasses != INVALID_HANDLE)
-	{
-		UnhookConVarChange(hPlayerClasses, OnClassPathChange);
-		CloseHandle(hPlayerClasses);
-	}
-	if ((hPlayerClasses = FindConVar("zr_config_path_playerclasses")) == INVALID_HANDLE)
+	if (!(hPlayerClasses = FindConVar("zr_config_path_playerclasses")))
 	{
 		SetFailState("Zombie:Reloaded is not running on this server");
 	}
-	HookConVarChange(hPlayerClasses, OnClassPathChange);
+	
+	hPlayerClasses.AddChangeHook(OnClassPathChange);
 }
 
-public OnClassPathChange(Handle:convar, const String:oldValue[], const String:newValue[])
+public void OnClassPathChange(Handle convar, const char[] oldValue, const char[] newValue)
 {
-	strcopy(sClassPath, sizeof(sClassPath), newValue);
 	OnConfigsExecuted();
 }
 
-public OnConfigsExecuted()
+public void OnConfigsExecuted()
 {
 	CreateTimer(0.2, OnConfigsExecutedPost);
 }
 
-public Action:OnConfigsExecutedPost(Handle:timer)
+Action OnConfigsExecutedPost(Handle timer)
 {
-	if (kv != INVALID_HANDLE)
-	{
-		CloseHandle(kv);
-	}
-	kv = CreateKeyValues("classes");
+	KeyValues kv = new KeyValues("classes");
 	
-	decl String:buffer[PLATFORM_MAX_PATH];
-	BuildPath(Path_SM, buffer, sizeof(buffer), "%s", sClassPath);
+	char buffer[PLATFORM_MAX_PATH];
+	hPlayerClasses.GetString(buffer, sizeof(buffer));
+	BuildPath(Path_SM, buffer, sizeof(buffer), "%s", buffer);
 	
-	if (!FileToKeyValues(kv, buffer))
+	if (!kv.ImportFromFile(buffer))
 	{
 		SetFailState("Class data file \"%s\" not found", buffer);
 	}
 	
-	
-	if (KvGotoFirstSubKey(kv))
+	if (kv.GotoFirstSubKey())
 	{
-		ClearArray(array_classes);
-		decl String:name[64], String:enable[32], String:defaultclass[32];
+		array_classes.Clear();
+		
+		char name[64], enable[32], defaultclass[32];
 		zrClasses Items;
-
+		
 		do
 		{
-			KvGetString(kv, "enabled", enable, 32);
-			KvGetString(kv, "team_default", defaultclass, 32);
+			kv.GetString("enabled", enable, sizeof(enable));
+			kv.GetString("team_default", defaultclass, sizeof(defaultclass));
 			
 			// check if is a enabled zombie class and no admin class and it's default class
-			if(StrEqual(enable, "yes") && StrEqual(defaultclass, "yes") && KvGetNum(kv, "team") == 0 && KvGetNum(kv, "flags") == 0)
+			if (StrEqual(enable, "yes") && StrEqual(defaultclass, "yes") && !kv.GetNum("team") && !kv.GetNum("flags"))
 			{
-				KvGetString(kv, "name", name, sizeof(name));
-				Items.Index = ZR_GetClassByName(name);
-				Items.health = KvGetNum(kv, "health", 5000);
-				KvGetString(kv, "model_path", Items.model, 128);
-				PushArrayArray(array_classes, Items); // save all info in the array
+				kv.GetString("name", name, sizeof(name));
+				Items.index = ZR_GetClassByName(name);
+				Items.health = kv.GetNum("health", 5000);
+				kv.GetString("model_path", Items.model, sizeof(zrClasses::model));
+				
+				array_classes.PushArray(Items);
 			}
 			
-		} while (KvGotoNextKey(kv));
+		} while (kv.GotoNextKey());
 	}
-	KvRewind(kv);
+	
+	delete kv;
 }
 
-public ZR_OnClientInfected(client, attacker, bool:motherInfect, bool:respawnOverride, bool:respawn)
+public int ZR_OnClientInfected(int client, int attacker, bool motherInfect, bool respawnOverride, bool respawn)
 {
-	new vida = GetClientHealth(client);
-	if(vida < 300)
+	
+	int player_health = GetClientHealth(client);
+	if (player_health < 300)
 	{
 		CreateTimer(0.5, Timer_SetDefaultClass, GetClientUserId(client), TIMER_FLAG_NO_MAPCHANGE);
 	}
 }
 
-public Action:Timer_SetDefaultClass(Handle:timer, any:userid)
+Action Timer_SetDefaultClass(Handle timer, any userid)
 {
 	int client = GetClientOfUserId(userid);
-	
-	if(client && IsClientInGame(client) && IsPlayerAlive(client) && ZR_IsClientZombie(client)) 
+	if (client && IsClientInGame(client) && IsPlayerAlive(client) && ZR_IsClientZombie(client))
+	{
 		SetDefaultClass(client);
+	}
 }
 
-SetDefaultClass(client)
+void SetDefaultClass(int client)
 {
 	zrClasses Items;
-	new randomnum = GetRandomInt(0, GetArraySize(array_classes)-1); // random value in the array
-	GetArrayArray(array_classes, randomnum, Items); // get class info from the array
 	
-	ZR_SelectClientClass(client, Items.Index, true, true); // set a valid class
-	SetEntityHealth(client, Items.health); // apply health of the class selected
-	if(strlen(Items.model) > 2 && IsModelPrecached(Items.model)) // check if model is valid and is precached
-		SetEntityModel(client, Items.model); // then apply it
-}
+	// get class info from the array
+	array_classes.GetArray(GetRandomInt(0, array_classes.Length - 1), Items);
+	
+	// set a valid class
+	ZR_SelectClientClass(client, Items.index); 
+	
+	// apply health of the class selected
+	SetEntityHealth(client, Items.health); 
+	
+	// check if model is valid and is precached
+	if (strlen(Items.model) > 2 && IsModelPrecached(Items.model)) 
+	{
+		// then apply it
+		SetEntityModel(client, Items.model); 
+	}
+} 
