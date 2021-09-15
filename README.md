@@ -5,8 +5,7 @@ This is made with the intent of helping a new server owner getting started with 
 
 Please remember that this is a BASE install that contains a few fixes. There will be other things that you need on your server. Most ZE servers end up with around 100+ plugins by the time they are "finished". This is to just get you started.
 
-LAST UPDATED: 2/09/2021
-This is a major update compared to the last version so some configs have changed. Please make sure you compare and update. 
+LAST UPDATED: 15/09/2021
 
 It includes:
 * Sourcemod 1.10 - https://www.sourcemod.net/
