@@ -1,0 +1,92 @@
+"Phrases"
+{
+	"Chat Hud Title"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s}"
+		"en"		"Chat Hud Anubis\n \nOn-Screen Time Counter: [{1}]\nChat Map Messages: [{2}]\nMessage Click Sound: [{3}]\nAlert Sound When Time Zero: [{4}]\nCounter Position: [{5}]\n ]"
+		"pt"		"Chat Hud Anubis\n \nContador de Tempo na Tela: [{1}]\nMenssagens de Chat do Mapa: [{2}]\nSom de click das Menssagens: [{3}]\nSom de Alerta Quando Tempo Zerar: [{4}]\nPosição do Contador: [{5}]\n "
+	}
+	"Time Counter"
+	{
+		"en"		"Time Counter"
+		"pt"		"Contador de Tempo"
+	}
+	"Map Messages"
+	{
+		"en"		"Map Messages"
+		"pt"		"Mensagens do Mapa"
+	}
+	"Chat Click Sound"
+	{
+		"en"		"Chat Click Sound"
+		"pt"		"Som de Click do Chat"
+	}
+	"Counter Alert Sound"
+	{
+		"en"		"Counter Alert Sound"
+		"pt"		"Som de Alerta do Contador"
+	}
+	"Counter Position"
+	{
+		"en"		"Counter Position"
+		"pt"		"Posição do Contador"
+	}
+	"Enable"
+	{
+		"en"		"Enable"
+		"pt"		"Habilitar"
+	}
+	"Desable"
+	{
+		"en"		"Disable"
+		"pt"		"Desabilitar"
+	}
+	"Enabled"
+	{
+		"en"		"Enabled"
+		"pt"		"Ativado"
+	}
+	"Desabled"
+	{
+		"en"		"Disabled"
+		"pt"		"Desativado"
+	}
+	"Change Hud Position"
+	{
+		"#format"		"{1:s}"
+		"en"		" {lightred}[{lightgreen}Chat_HUD{lightred}] < {lightgreen}Current value: {yellow}{1} {lightgreen}Default: {yellow}-1.0 0.060 {lightred}> {default}Type the new position of Hud in the chat and [ENTER] or type {lightgreen}!cancel {default}to cancel."
+		"pt"		" {lightred}[{lightgreen}Chat_HUD{lightred}] < {lightgreen}Valor Atual: {yellow}{1} {lightgreen}Padrão: {yellow}-1.0 0.060 {lightred}> {default}Digite a nova posiçao do Hud no chat e de [ENTER] ou digite {lightgreen}!cancel {default}para cancelar."
+	}
+	"Cancel"
+	{
+		"en"		" {lightred}[{lightgreen}Chat_HUD{lightred}]{default} Canceled Action."
+		"pt"		" {lightred}[{lightgreen}Chat_HUD{lightred}]{default} Ação Cancelada."
+	}
+	"Chat Hud Admin Title"
+	{
+		"en"		"Chat Hud Admin\n "
+		"pt"		"Chat Hud Admin\n "
+	}
+	"No Messages found"
+	{
+		"en"		" {lightred}[{lightgreen}Chat_HUD{lightred}]{default} No map messages found, wait for the file to be created.."
+		"pt"		" {lightred}[{lightgreen}Chat_HUD{lightred}]{default} Nenhuma mensagem do mapa encontrada, aguarde a criação do arquivo.."
+	}
+	"Invalid Messages"
+	{
+		"en"		" {lightred}[{lightgreen}Chat_HUD{lightred}]{default} This message is not valid.."
+		"pt"		" {lightred}[{lightgreen}Chat_HUD{lightred}]{default} Esta mensagem não e valida.."
+	}
+	"Chat Hud Title Admin Enabled"
+	{
+		"#format"	"{1:s}"
+		"en"		"Chat Hud Admin\n \n{1} [Enabled]\n "
+		"pt"		"Chat Hud Admin\n \n{1} [Ativado]\n "
+	}
+	"Chat Hud Title Admin Disabled"
+	{
+		"#format"	"{1:s}"
+		"en"		"Chat Hud Admin\n \n{1} [Disabled]\n "
+		"pt"		"Chat Hud Admin\n \n{1} [Desativado]\n "
+	}
+}

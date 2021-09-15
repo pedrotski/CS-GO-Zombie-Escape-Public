@@ -1,0 +1,128 @@
+"Chat_Hud"
+{
+	"### HOLD THE FOUNTAIN FOR 30 SECONDS ##"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} HOLD THE FOUNTAIN FOR 30 SECONDS  {yellow}◄"
+		"ChatHud"		"►  HOLD THE FOUNTAIN FOR 30 SECONDS  ◄"
+	}
+	"### 10 SECONDS REMAINING ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} 10 SECONDS REMAINING  {yellow}◄"
+		"ChatHud"		"►  10 SECONDS REMAINING  ◄"
+	}
+	"### STAY IN THE FOUNTAIN FOR TELEPORT ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} STAY IN THE FOUNTAIN FOR TELEPORT  {yellow}◄"
+	}
+	"enabled"		"1"
+	"### HIDE HERE FOR 60 SECONDS ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} HIDE HERE FOR 60 SECONDS  {yellow}◄"
+		"ChatHud"		"►  HIDE HERE FOR 60 SECONDS  ◄"
+	}
+	"### ZOMBIES ARE INCOMING IN 5 SECONDS ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} ZOMBIES ARE INCOMING IN 5 SECONDS  {yellow}◄"
+		"ChatHud"		"►  ZOMBIES ARE INCOMING IN 5 SECONDS  ◄"
+	}
+	"### 30 SECONDS REMAINING ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} 30 SECONDS REMAINING  {yellow}◄"
+		"ChatHud"		"►  30 SECONDS REMAINING  ◄"
+	}
+	"### ZOMBIES ARE INCOMING IN 5 SECONDS"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} ZOMBIES ARE INCOMING IN 5 SECONDS {yellow}◄"
+		"ChatHud"		"►  ZOMBIES ARE INCOMING IN 5 SECONDS ◄"
+	}
+	"### TELEPORT INCOMING IN 30 SECONDS ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} TELEPORT INCOMING IN 30 SECONDS  {yellow}◄"
+		"ChatHud"		"►  TELEPORT INCOMING IN 30 SECONDS  ◄"
+	}
+	"### HELL BRIDGE SPAWNS IN 5 SECONDS"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} HELL BRIDGE SPAWNS IN 5 SECONDS {yellow}◄"
+		"ChatHud"		"►  HELL BRIDGE SPAWNS IN 5 SECONDS ◄"
+	}
+	"### DESTROY THE STATUE ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} DESTROY THE STATUE  {yellow}◄"
+	}
+	"### HOLD HERE FOR 30 SECONDS ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} HOLD HERE FOR 30 SECONDS  {yellow}◄"
+		"ChatHud"		"►  HOLD HERE FOR 30 SECONDS  ◄"
+	}
+	"### 10 SECONDS REMAININGS ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} 10 SECONDS REMAININGS  {yellow}◄"
+		"ChatHud"		"►  10 SECONDS REMAININGS  ◄"
+	}
+	"### TELEPORT INCOMING IN 30 SECONDS"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} TELEPORT INCOMING IN 30 SECONDS {yellow}◄"
+		"ChatHud"		"►  TELEPORT INCOMING IN 30 SECONDS ◄"
+	}
+	">>> KILL HIM BEFORE HE KILLS YOU  <<<"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} KILL HIM BEFORE HE KILLS YOU   {yellow}◄"
+	}
+	"### DEFEND VENTS IN 10 SECONDS ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} DEFEND VENTS IN 10 SECONDS  {yellow}◄"
+		"ChatHud"		"►  DEFEND VENTS IN 10 SECONDS  ◄"
+	}
+	"### NARAKA HAS DISAPPEAR !! ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} NARAKA HAS DISAPPEAR !!  {yellow}◄"
+	}
+	"### SHHHHHHH ... NARAKA ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} SHHHHHHH ... NARAKA  {yellow}◄"
+	}
+	">>> HE'S DEAD. DEFEND UNTIL TELEPORT <<<"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} HE'S DEAD. DEFEND UNTIL TELEPORT  {yellow}◄"
+	}
+	"### TEST THIS YOU FOOL !! ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} TEST THIS YOU FOOL !!  {yellow}◄"
+	}
+	"### NICE TRY YOU FOOL !!! ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} NICE TRY YOU FOOL !!!  {yellow}◄"
+	}
+	"### HOLD HERE FOR 15 SECONDS ###"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green} HOLD HERE FOR 15 SECONDS  {yellow}◄"
+		"ChatHud"		"►  HOLD HERE FOR 15 SECONDS  ◄"
+	}
+	"500"
+	{
+		"enabled"		"1"
+		"default"		"{red}[Console] {yellow}► {green}500 {yellow}◄"
+		"ChatHud"		"► 500 ◄"
+	}
+}
