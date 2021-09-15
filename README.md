@@ -15,6 +15,7 @@ It includes:
 * Chat Hud Countdown Translator Anubis-Edition - https://github.com/Stewart-Anubis/Chat-Hud-Countdown-Translator-Anubis-Edition
 * Hint Color Message Fix - https://github.com/Franc1sco/FixHintColorMessages
 * Dhooks2 - https://github.com/peace-maker/DHooks2
+* Auto Particle Precacher
 * Arms Fix 
 * Noblock
 * ZR Classfix 
