@@ -356,8 +356,6 @@
 	weapon_sound_falloff_multiplier						1
 	sv_camera_fly_enabled								1
 	say								1
-	exec							1
-	sm_cvar							1
 	sm_say							1
 	zr_infect_mzombie_ratio			1
 	zr_infect_mzombie_respawn		1
