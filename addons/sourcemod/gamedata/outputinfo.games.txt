@@ -1,0 +1,72 @@
+"Games"
+{
+	"csgo"
+	{
+		"Addresses"
+		{
+			"g_EntityListPool"
+			{
+				"windows"
+				{
+					"signature" "g_EntityListPool.Alloc"
+					"read" "2"
+				}
+				"linux"
+				{
+					"signature" "CBaseEntity_ConnectOutputToScript"
+					"read" "216"
+					"read" "12"
+				}
+			}
+		}
+		
+		"Signatures"
+		{
+			"g_EntityListPool.Alloc"
+			{
+				"library"	"server"
+				"windows"	"\x83\x3D\x2A\x2A\x2A\x2A\x1C\x73\x2A"
+			}
+			"CBaseEntity_ConnectOutputToScript"
+			{
+				"library"	"server"
+				"linux"		"\x55\x89\xE5\x57\x56\x53\x83\xEC\x4C\x8B\x45\x10\x8B\x5D\x0C"
+			}
+		}
+	}
+	"cstrike"
+	{
+		"Addresses"
+		{
+			"g_EntityListPool"
+			{
+				"windows"
+				{
+					"signature" "g_EntityListPool"
+					//"read" "17"
+					"read" "115" // http://world-source.ru/_fr/42/monster.cstrike.txt
+				}
+				"linux"
+				{
+					"signature" "CEventAction__operator_delete"
+					"read" "12"
+				}
+			}
+		}
+
+		"Signatures"
+		{
+			"g_EntityListPool"
+			{
+				"library" "server"
+				//"windows" "\x6A\x00\x68\x2A\x2A\x2A\x2A\x6A\x01\x68\x2A\x2A\x2A\x2A\x6A\x1C"
+				"windows" "\x55\x8B\xEC\x83\x2A\x2A\x8B\x2A\x2A\x56\x8B\x2A\x8B\x2A\x2A\x89" // http://world-source.ru/_fr/42/monster.cstrike.txt
+			}
+			"CEventAction__operator_delete"
+			{
+				"library" "server"
+				"linux" "@_ZN12CEventActiondlEPv"
+			}
+		}
+	}
+}

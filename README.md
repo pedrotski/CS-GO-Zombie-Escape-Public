@@ -23,6 +23,7 @@ It includes:
 * ZR InfectionArmor
 * ZR Noend
 * ZR Teams
+* Output Info - Windows - https://github.com/oylsister/sm-ext-outputinfo - Linux - https://github.com/PerfectLaugh/sm-ext-outputinfo
 * CSGO Fixes - https://github.com/Vauff/CSGOFixes-SP
 * BSP Custom Whitelist - https://github.com/Vauff/bspconvar_custom_whitelist
 * Movment Unlocker - https://forums.alliedmods.net/showthread.php?t=255298
