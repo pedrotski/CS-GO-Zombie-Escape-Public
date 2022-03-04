@@ -5,30 +5,31 @@ This is made with the intent of helping a new server owner getting started with 
 
 Please remember that this is a BASE install that contains a few fixes. There will be other things that you need on your server. Most ZE servers end up with around 100+ plugins by the time they are "finished". This is to just get you started.
 
-LAST UPDATED: 24/10/2021
+LAST UPDATED: 04/03/2022
 
 It includes:
-* Sourcemod 1.10 - https://www.sourcemod.net/
+* Sourcemod 1.11 - build 6860 - https://www.sourcemod.net/
 * Metamod 1.11 - http://metamodsource.net/
 * Stripper Git (129 Windows, 135 Linux) - http://www.bailopan.net/stripper/snapshots/1.2/
-* Chat Hud Countdown Translator Anubis-Edition - https://github.com/Stewart-Anubis/Chat-Hud-Countdown-Translator-Anubis-Edition
+* Console Chat Manager - https://gitlab.com/counterstrikesource/sm-plugins/consolechatmanager
 * Hint Color Message Fix - https://github.com/Franc1sco/FixHintColorMessages
 * Dhooks2 - https://github.com/peace-maker/DHooks2
 * Admin Romm Finder - https://github.com/IT-KiLLER/CSGO-Admin-Room-Finder
-* Auto Particle Precacher
-* Arms Fix 
-* No Fall Damage
-* ZR Classfix 
-* ZR InfectionArmor
-* ZR Noend
-* ZR Teams
+* Arms Fix - Gives you custom model arms (Has a memory leak, not suitable for large servers, will update with a better linux/windows version soon)
+* No Fall Damage - Obvious lol
+* Particle Fix - https://github.com/komashchenko/ParticleFix
+* ZR Classfix  - Fixes the last player being human
+* ZR InfectionArmor - No alone infection & no armor
+* ZR Noend - Fixes round ending when someone swaps teams
+* ZR Teams - Forces players to CT on round start
 * Output Info - Windows - https://github.com/oylsister/sm-ext-outputinfo - Linux - https://github.com/PerfectLaugh/sm-ext-outputinfo
 * CSGO Fixes - https://github.com/Vauff/CSGOFixes-SP
 * BSP Custom Whitelist - https://github.com/Vauff/bspconvar_custom_whitelist
 * Movment Unlocker - https://forums.alliedmods.net/showthread.php?t=255298
 * Map Change Crash Fixer - https://github.com/Ilusion9/csgo-fix-mapchange-crash-sm
-* A2S_Rules Hax - https://forums.alliedmods.net/showthread.php?t=236521
 * Zombie Reloaded Anubis/Franug-Edition- https://github.com/Stewart-Anubis/sm-zombiereloaded-3-Franug-Edition
+
+Some of the plugins listed here are custom and there will be no updates provided. If you do update something, then please submit a pull request here so people in the future have an easy time setting up a server. 
 
 Simply copy to the root of your CSGO dir, Add the convars you need to bspconvar_custom_whitelist.txt in the root of your CSGO dir and you are done.
 

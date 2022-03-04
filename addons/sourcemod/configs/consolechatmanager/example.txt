@@ -1,0 +1,39 @@
+﻿"Console_C"
+{
+	"The map message to replace"
+	{
+		"default" "Console:{red} The map message if the language of client not appear here"
+		"chi" "控制台: {red}The map message for chinese clients"
+		"es" "Consola: The map message for spanish clients"
+	}
+	"The map message 2 to replace"
+	{
+		"default" "Console:{red} The map message 2 if the language of client not appear here"
+		"chi" "控制台: {red}The map message 2 for chinese clients"
+		"es" "Consola: The map message 2 for spanish clients"
+	}
+	"The map message 3 to replace"
+	{
+		"sound" "yoursounddirectory/yoursound.mp3" // emit this sound when this message appear
+
+		"default" "Console:{red} The map message 3 if the language of client not appear here"
+
+	}
+	"Map by a spammer"
+	{
+		"blocked" "1" // block this message
+	}
+	"door opened! humans go back!"
+	{
+
+		"default" "Console:{red} door opened! humans go back!"
+		"es" "Puerta abierta! Humanos retroceded!"
+
+		"hinttext" // adding a hinttext message
+		{
+			"default" "Humans go back!"
+			"chi" "控制台!"
+			"es" "Puerta abierta! Humanos retroceded!"
+		]
+	}
+}
