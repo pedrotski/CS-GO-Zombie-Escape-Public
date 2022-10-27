@@ -5,12 +5,12 @@ This is made with the intent of helping a new server owner getting started with 
 
 Please remember that this is a BASE install that contains a few fixes. There will be other things that you need on your server. Most ZE servers end up with around 100+ plugins by the time they are "finished". This is to just get you started.
 
-LAST UPDATED: 18/03/2022
+LAST UPDATED: 27/10/2022
 
 It includes:
-* Sourcemod 1.11 - build 6905 - https://www.sourcemod.net/
+* Sourcemod 1.11 - build 6916 - https://www.sourcemod.net/
 * Metamod 1.11 - build 1148 -  http://metamodsource.net/
-* Stripper Git (129 Windows, 135 Linux) - http://www.bailopan.net/stripper/snapshots/1.2/
+* Stripper Git (141 Windows, 141 Linux) - http://www.bailopan.net/stripper/snapshots/1.2/
 * Console Chat Manager - https://gitlab.com/counterstrikesource/sm-plugins/consolechatmanager
 * Hint Color Message Fix - https://github.com/Franc1sco/FixHintColorMessages
 * Admin Romm Finder - https://github.com/IT-KiLLER/CSGO-Admin-Room-Finder
