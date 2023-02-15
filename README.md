@@ -1,3 +1,12 @@
+# THIS REPO IS NOW OUT OF DATE, READ BELOW!
+
+Start a ZE server with 1-click: https://www.gamehostbros.com/
+Get your own version: https://github.com/Game-Host-Bros/mod-zombie-escape
+
+I have since moved to a repo without Sourcemod or Metamod added. This is because we maintain it for our hosting company Game Host Bros. We have it included on our panel so you can deploy it quickly. 
+
+Alternatively, if you would prefer to use your own server you can simply visit the github I have shared above and thats the exact updated version that we use on our 1-click installer. If you get stuck or have questions then make sure you come and join us on Discord. We are more than happy to help you out - https://www.gamehostbros.com/
+
 # CSGO Zombie Escape Mod Server (Ready To Use)
 A ready to go Zombie Escape Server base install you can copy to your Linux or Windows CS GO server.
 
@@ -39,7 +48,6 @@ For Stripper, Entwatch or Bosshud configs, get them from here:
 * https://github.com/pedrotski/Zombie-Escape-Configs-CS-GO
 * https://github.com/gflclan-cs-go-ze/ZE-Configs
 * https://github.com/oylsister/ZombieEscape-Map-Config
-* https://github.com/kOEN-iwnl/Public-Strippers
 
 If you're looking for more Zombie Escape specific plugins then find them here (Entwatch, !music plugins for ZE etc)
 * https://github.com/darkerz7/CSGO-Plugins
